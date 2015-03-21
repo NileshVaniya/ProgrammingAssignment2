@@ -1,4 +1,4 @@
-## The following function will create a special kind of 'Matrix' (a list) which returns
+## The following function will create a special kind of 'Matrix' (a list) which contains
 ## four functions - get, set, getInverse and setInverse. The aim for this functions is to
 ## get/set values from/in cache.
 
@@ -11,9 +11,7 @@ makeCacheMatrix <- function(x = matrix()) {
     inv <<- null
   }
   get <- function() x
-  setInverse <- function(inverse) {
-    inv <<- inverse
-  }
+  setInverse <- function(inverse) inv <<- inverse
   getInverse <- function() inv
   list (set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
